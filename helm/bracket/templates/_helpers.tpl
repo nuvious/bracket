@@ -67,3 +67,17 @@ Create a default fully qualified name for postgresql
 {{- define "postgresql.fullname" -}}
 {{- printf "%s-postgresql" .Release.Name -}}
 {{- end -}}
+
+{{/*
+Create a default fully qualified name for backend
+*/}}
+{{- define "backend.fullname" -}}
+{{- printf "%s-backend" .Release.Name -}}
+{{- end -}}
+
+{{/*
+Create a default fully qualified name for frontend
+*/}}
+{{- define "frontend.fullname" -}}
+{{- printf "%s-frontend" .Release.Name -}}
+{{- end -}}

@@ -58,7 +58,7 @@ spec:
           - name: PG_DSN
             value: "postgresql://{{ .Values.postgresql.auth.username }}:{{ .Values.postgresql.auth.password }}@{{ include "postgresql.fullname" . }}:5432/{{ .Values.postgresql.auth.database }}"
           - name: ENVIRONMENT
-            value: "{{ .Values.backend.environment }}"
+            value: "{{ .Values.backend.environment.ENVIRONMENT }}"
       {{- with .Values.backend.volumes }}
       volumes:
         {{- toYaml . | nindent 8 }}
